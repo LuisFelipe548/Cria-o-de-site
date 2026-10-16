@@ -59,24 +59,18 @@ function calculate() {
     const num2 = parseFloat(currentInput);
 
     switch (operator) {
-        case "+":
-            result = num1 + num2;
-            break;
-        case "-":
-            result = num1 - num2;
-            break;
-        case "*":
-            result = num1 * num2;
-            break;
-        case "/":
-            result = num1 / num2;
-            break;
-        default:
-            return;
+        case "+":result = num1 + num2;break;
+        case "-":result = num1 - num2;break;
+        case "*":result = num1 * num2;break;
+        case "/":result = num1 / num2;break;
+        default:return;
     }
 
-    currentInput = String(result);
+    currentInput = result;
     previousInput = "";
+    operator = "";
+    updateDisplay();
+}
     operator = "";
     updateDisplay();
 }
